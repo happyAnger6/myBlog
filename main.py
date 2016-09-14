@@ -15,11 +15,13 @@ if not tornado.options.options.url:
 
 settings = {
 	"base_url": tornado.options.options.url,
+    "template_path": "templates",
+    "static_path": "static",
 }
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("hello,world")
+        self.render("main.html")
 
 def make_app():
     return tornado.web.Application([
