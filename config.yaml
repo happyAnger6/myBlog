@@ -1,0 +1,7 @@
+"database":
+  "config": "mongodb://192.168.17.129:27017/"
+  "db": "anger6"
+"session":
+  "db": !!int "1"
+  "host": "localhost"
+  "port": !!int "6379"

@@ -1,0 +1,51 @@
+ <header class="main-header" style="background-image: url(/static/images/header.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <h1><span class="hide">Laravel - </span>张 晓 安 的个人博客</h1>
+                    <h2>Keep Going,never stop your foot!</h2>
+
+                    <img src="http://image.golaravel.com/e/b0/4e4bd788405aab87f03d26edc4ab4.png" alt="Laravel" class="hide">
+                </div>
+
+                <div class="col-sm-12">
+                    {% for item in categorys %}
+                    <!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    {{ item['name'] }} <span class="caret"></span>
+  </button>
+    {% if sub_categorys[item['name']] %}
+  <ul class="dropdown-menu" role="menu">
+       {% for sub_item in sub_categorys[item['name']] %}
+        <li><a href="#">{{ sub_item }}</a></li>
+      {% end %}
+  </ul>
+    {% end %}
+</div>
+                    {% end %}
+                    <!--<a href="http://www.golaravel.com/laravel/docs/4.0/" class="btn btn-default btn-doc" target="_blank">4.0 中文文档</a>-->
+                </div>
+            </div>
+        </div>
+    </header>
+ <nav class="main-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-bars"></i>
+                        </span>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="menu">
+        <li class="nav-current" role="presentation"><a href="/">首页</a></li>
+</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>

@@ -1,0 +1,12 @@
+{% extends "nobootstrap_base.htm" %}
+
+{% block body %}
+
+<textarea id="NicEdit" cols="80" rows="5">Some Sample Text</textarea>
+<textarea id="NotNicEdit" cols="80" rows="5">Some Sample Text</textarea>
+<div id="NicEdit2">Some Sample Text</div>
+<script src="{{ static_url('assets/js/nicEdit.js') }}"></script>
+<script src="{{ static_url('assets/js/aricle.js') }}"></script>
+{% end %}
+{% block footer_static %}
+{% end %}
